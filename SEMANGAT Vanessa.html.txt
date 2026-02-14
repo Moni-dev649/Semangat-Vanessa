@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semangat untuk Vanessa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> <!-- Font feminin untuk header -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #E6E6FA, #FFFFFF); /* Soft purple gradien */
+            background-image: url('https://subtlepatterns.com/patterns/lavender.png'); /* Motif bunga lavender halus untuk rame */
+            background-size: 200px 200px; /* Ukuran pola agar rame tapi tidak terlalu besar */
+            background-repeat: repeat; /* Mengulang pola untuk kesan rame */
+            background-blend-mode: overlay; /* Blend dengan gradien agar lembut */
+            opacity: 0.8; /* Opacity rendah agar tidak mengganggu teks */
+            color: #333;
+            text-align: center;
+            overflow-x: hidden; /* Untuk animasi bunga jatuh */
+        }
+        header {
+            background-color: #DA70D6; /* Lavender untuk header */
+            color: white;
+            padding: 2rem;
+            font-family: 'Dancing Script', cursive; /* Font tangan feminin */
+            font-size: 2.5rem;
+            position: relative;
+        }
+        header::after {
+            content: "🌹💜"; /* Ikon bunga mawar dan lavender */
+            font-size: 2rem;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.9); /* Overlay putih transparan untuk readability teks */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .message {
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            animation: fadeIn 3s ease-in-out;
+            line-height: 1.6;
+        }
+        .valentine-message {
+            font-family: 'Dancing Script', cursive; /* Font feminin untuk teks Valentine */
+            font-size: 2.5rem;
+            color: #DA70D6; /* Lavender */
+            margin: 2rem 0;
+            animation: fadeIn 4s ease-in-out;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #DA70D6; /* Lavender untuk footer */
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-family: 'Dancing Script', cursive;
+        }
+        /* Animasi bunga jatuh */
+        .falling-flowers {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .flower {
+            position: absolute;
+            font-size: 2rem;
+            animation: fall 10s linear infinite;
+        }
+        .flower:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .flower:nth-child(2) { left: 30%; animation-delay: 2s; }
+        .flower:nth-child(3) { left: 50%; animation-delay: 4s; }
+        .flower:nth-child(4) { left: 70%; animation-delay: 6s; }
+        .flower:nth-child(5) { left: 90%; animation-delay: 8s; }
+        @keyframes fall {
+            0% { top: -10%; opacity: 1; }
+            to { top: 100%; opacity: 0; transform: rotate(360deg); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animasi bunga jatuh latar belakang -->
+    <div class="falling-flowers">
+        <div class="flower">🌹</div> <!-- Mawar -->
+        <div class="flower">💜</div> <!-- Lavender -->
+        <div class="flower">🌹</div>
+        <div class="flower">💜</div>
+        <div class="flower">🌹</div>
+    </div>
+    
+    <header>
+        <h1>Semangat untuk Vanessa! 🌹💜</h1>
+        <p>Seperti bunga mawar dan lavender, kamu penuh cinta dan ketenangan!</p>
+    </header>
+    
+    <div class="container">
+        <div class="message">
+            <p>Hai Vanessa,</p>
+            <p>Aku ingin mengucapkan semangat kepadamu. Kamu seperti bunga mawar yang indah dan kuat, selalu bersinar dengan cintamu yang tulus. Dan seperti lavender yang tenang, kamu membawa inspirasi dan kedamaian ke sekitarmu. Apa pun tantangan yang sedang kamu hadapi, ingatlah bahwa kamu cantik, penuh potensi, dan bisa mekar seperti bunga-bunga ini!</p>
+            <p>Dengan cinta dan dukungan,</p>
+            <p>[Abzari]</p>
+        </div>
+        
+        <!-- Kata-kata Selamat Hari Valentine -->
+        <div class="valentine-message">
+            <p>Selamat Hari Valentine, Vanessa! 💖</p>
+            <p>Semoga hari ini penuh cinta, kebahagiaan, dan momen indah. Kamu adalah bunga terindah di kehidupanku!</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 - Dibuat dengan cinta untuk Vanessa 🌹💜</p>
+    </footer>
+    
+    <script>
+        // JavaScript untuk animasi halus saat halaman dimuat
+        window.onload = function() {
+            const message = document.querySelector('.message');
+            message.style.animation = 'fadeIn 3s ease-in-out';
+        };
+    </script>
+</body>
+</html>
